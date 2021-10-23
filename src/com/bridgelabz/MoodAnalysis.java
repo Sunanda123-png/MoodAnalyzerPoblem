@@ -1,11 +1,17 @@
 package com.bridgelabz;
 
+/**
+ * author:-Sunanda Shil
+ */
+
 public class MoodAnalysis {
+    //created method to check Mood
     public String analyseMood(String message) {
-        if (message.contains("sad"))
+        //message=message.toLowerCase();
+        if (message.contains("I am in Happy Mood")){
             return "SAD";
-        else
-            return "HAPPY";
+        }
+        return "HAPPY";
 
     }
 }
