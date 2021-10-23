@@ -6,21 +6,19 @@ package com.bridgelabz;
 
 public class MoodAnalysis {
     String message;
-    //creating default constructor for null message
-    public void MoodAnalysis(){
-        message=" ";
-    }
     //creating parametarize constructor for initialize
     public void MoodAnalysis(String message){
         this.message=message;
     }
     //created method to check Mood
-    public String analyseMood(String message) {
-        //message=message.toLowerCase();
-        if (message.contains("I am in Happy Mood")){
-            return "SAD";
+    public String analyseMood (String message) throws MoodAnalysisException {
+        try {
+            if (message.contains("SAD")) {
+                return "SAD";
+            }
+            return "HAPPY";
+        }catch (NullPointerException e){
+            throw new MoodAnalysisException("Please enter a valid Message");
         }
-        return "HAPPY";
-
     }
 }
