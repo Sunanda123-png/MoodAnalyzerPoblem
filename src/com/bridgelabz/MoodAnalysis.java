@@ -16,11 +16,15 @@ public class MoodAnalysis {
     }
     //created method to check Mood
     public String analyseMood(String message) {
-        //message=message.toLowerCase();
-        if (message.contains("I am in Happy Mood")){
-            return "SAD";
+        try {
+            if (message.contains("SAD")) {
+                return "SAD";
+            }
+            return "HAPPY";
+        }catch (NullPointerException e){
+            return "HAPPY";
         }
-        return "HAPPY";
+
 
     }
 }

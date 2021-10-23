@@ -7,7 +7,7 @@ public class MoodAnalysisTsest {
     @Test
     void givenMessage_WhenSad_ShouldReturnSad() {
         MoodAnalysis moodAnalyser = new MoodAnalysis();
-        String mood = moodAnalyser.analyseMood("I am in any Mood");
+        String mood = moodAnalyser.analyseMood("NULL");
         Assertions.assertEquals("HAPPY", mood);
     }
 }
