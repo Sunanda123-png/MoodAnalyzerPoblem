@@ -5,13 +5,12 @@ import org.junit.jupiter.api.Assertions;
 
 public class MoodAnalysisTsest {
     @Test
-    void givenMessage_WhenSad_ShouldReturnSad() throws MoodAnalysisException {
+    public void givenEmptyMoodShouldThrowException(){
+        MoodAnalysis moodAnalyser = new MoodAnalysis();
         try{
-            MoodAnalysis moodAnalyser = new MoodAnalysis();
-            String mood = moodAnalyser.analyseMood(null);
-            Assertions.assertEquals("HAPPY", mood);
-        }catch (Exception e){
-
+                moodAnalyser.analyseMood(null);
+        }catch (MoodAnalysisException e){
+            Assertions.assertEquals(MoodAnalysisException.ExceptionType.ENTERED_NULL,e.type);
         }
     }
 }
