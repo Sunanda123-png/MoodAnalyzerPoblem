@@ -13,8 +13,6 @@ public class MoodAnalysis {
     //created method to check Mood
     public String analyseMood (String message) throws MoodAnalysisException {
         try {
-            if (message.length()==0)
-                throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_EMPTY,"Please enter a valid Message");
             if (message.contains("SAD")) {
                 return "SAD";
             }
