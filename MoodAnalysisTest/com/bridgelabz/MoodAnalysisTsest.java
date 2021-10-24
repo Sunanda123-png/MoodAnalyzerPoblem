@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Assertions;
 
 public class MoodAnalysisTsest {
     @Test
-    public void givenEmptyMoodShouldThrowException(){
+    public void givenNullMoodShouldThrowException(){
         MoodAnalysis moodAnalyser = new MoodAnalysis();
         try{
                 moodAnalyser.analyseMood(null);
